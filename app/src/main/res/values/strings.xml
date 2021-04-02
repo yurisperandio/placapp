@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">UFCApp</string>
+
+    <string name="homeMessage">Make your fights amazing</string>
+    <string name="homeNewGame">New Fight</string>
+    <string name="homeExit">Exit</string>
+
+
+    <string name="preGameHomeTeamLabel">Athlete One:</string>
+    <string name="preGameAwayTeamLabel">Athelete Two:</string>
+    <string name="preGameStart">Start Fight</string>
+
+    <string name="scoreGameExit">Exit</string>
+
+
+</resources>

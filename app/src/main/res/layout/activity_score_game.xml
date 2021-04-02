@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Athlete One -->
+    <TextView
+        android:id="@+id/fightScoreAthleteOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteOneScore"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteOneScore"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fightScoreAthleteOneIncrease"
+        />
+
+
+    
+    <!-- Athlete Two -->
+    <TextView
+        android:id="@+id/fightScoreAthleteTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteTwoScore"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteTwoScore"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/fightScoreAthleteTwoIncrease"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/gameScoreExitButton"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/scoreGameExit"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cornerRadius="100dp"
+        />
+
+    <!-- Round 1 -->
+    <TextView
+        android:id="@+id/roundOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/fightScoreAthleteOneScore"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Round 1"
+        app:layout_constraintTop_toTopOf="@id/fightScoreAthleteOneScore"
+        app:layout_constraintBottom_toBottomOf="@id/fightScoreAthleteOneScore"
+        />
+    <!-- Athlete 1 -->
+    <ImageView
+        android:id="@+id/fightScoreAthleteOneIncrease"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteOneScore"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteOneScore"
+        app:layout_constraintBottom_toTopOf="@id/fightScoreAthleteOneScore"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteOne"
+        />
+
+    <TextView
+        android:id="@+id/fightScoreAthleteOneScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@id/fightScoreAthleteTwoScore"
+        app:layout_constraintStart_toEndOf="@id/roundOne"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteOneIncrease"
+        />
+
+    <ImageView
+        android:id="@+id/fightScoreAthleteOneDecrease"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteOneScore"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteOneScore"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteOneScore"
+        />
+
+    <!-- Athlete 2 -->
+
+    <ImageView
+        android:id="@+id/fightScoreAthleteTwoIncrease"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteTwoScore"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteTwoScore"
+        app:layout_constraintBottom_toTopOf="@id/fightScoreAthleteTwoScore"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteTwo"
+        />
+
+    <TextView
+        android:id="@+id/fightScoreAthleteTwoScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@id/fightScoreAthleteOneScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteTwoIncrease"
+        />
+
+    <ImageView
+        android:id="@+id/fightScoreAthleteTwoDecrease"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteTwoScore"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteTwoScore"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteTwoScore"
+        />
+
+
+    <!-- Round 2 -->
+    <TextView
+        android:id="@+id/roundTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/fightScoreAthleteOneScoreRoundTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Round 2"
+        app:layout_constraintTop_toTopOf="@id/fightScoreAthleteOneScoreRoundTwo"
+        app:layout_constraintBottom_toBottomOf="@id/fightScoreAthleteOneScoreRoundTwo"
+        />
+    <!-- Athlete 1 -->
+    <ImageView
+        android:id="@+id/fightScoreAthleteOneIncreaseRoundTwo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteOneScoreRoundTwo"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteOneScoreRoundTwo"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteOneDecrease"
+        />
+
+    <TextView
+        android:id="@+id/fightScoreAthleteOneScoreRoundTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@id/fightScoreAthleteTwoScoreRoundTwo"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteOneIncreaseRoundTwo"
+        app:layout_constraintStart_toEndOf="@id/roundTwo"
+        />
+
+    <ImageView
+        android:id="@+id/fightScoreAthleteOneDecreaseRoundTwo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteOneScoreRoundTwo"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteOneScoreRoundTwo"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteOneScoreRoundTwo"
+        />
+
+    <!-- Athlete 2 -->
+
+    <ImageView
+        android:id="@+id/fightScoreAthleteTwoIncreaseRoundTwo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteTwoScoreRoundTwo"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteTwoScoreRoundTwo"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteTwoDecrease"
+        />
+
+    <TextView
+        android:id="@+id/fightScoreAthleteTwoScoreRoundTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteTwoIncreaseRoundTwo"
+        app:layout_constraintStart_toEndOf="@id/fightScoreAthleteOneScoreRoundTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/fightScoreAthleteTwoDecreaseRoundTwo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteTwoScoreRoundTwo"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteTwoScoreRoundTwo"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteTwoScoreRoundTwo"
+        />
+
+
+
+
+
+
+
+
+    <!-- Round 3 -->
+    <TextView
+        android:id="@+id/roundThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/fightScoreAthleteOneScoreRoundThree"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Round 3"
+        app:layout_constraintTop_toTopOf="@id/fightScoreAthleteOneScoreRoundThree"
+        app:layout_constraintBottom_toBottomOf="@id/fightScoreAthleteOneScoreRoundThree"
+        />
+    <!-- Athlete 1 -->
+    <ImageView
+        android:id="@+id/fightScoreAthleteOneIncreaseRoundThree"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteOneScoreRoundThree"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteOneScoreRoundThree"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteOneDecreaseRoundTwo"
+        />
+
+    <TextView
+        android:id="@+id/fightScoreAthleteOneScoreRoundThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@id/fightScoreAthleteTwoScoreRoundThree"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteOneIncreaseRoundThree"
+        app:layout_constraintStart_toEndOf="@id/roundThree"
+        />
+
+    <ImageView
+        android:id="@+id/fightScoreAthleteOneDecreaseRoundThree"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteOneScoreRoundThree"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteOneScoreRoundThree"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteOneScoreRoundThree"
+        />
+
+    <!-- Athlete 2 -->
+    <ImageView
+        android:id="@+id/fightScoreAthleteTwoIncreaseRoundThree"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteTwoScoreRoundThree"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteTwoScoreRoundThree"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteTwoDecreaseRoundTwo"
+        />
+
+    <TextView
+        android:id="@+id/fightScoreAthleteTwoScoreRoundThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteTwoIncreaseRoundThree"
+        app:layout_constraintStart_toEndOf="@id/fightScoreAthleteOneScoreRoundThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/fightScoreAthleteTwoDecreaseRoundThree"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintStart_toStartOf="@id/fightScoreAthleteTwoScoreRoundThree"
+        app:layout_constraintEnd_toEndOf="@id/fightScoreAthleteTwoScoreRoundThree"
+        app:layout_constraintTop_toBottomOf="@id/fightScoreAthleteTwoScoreRoundThree"
+        />
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

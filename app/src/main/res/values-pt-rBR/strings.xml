@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UFCApp</string>
+
+    <string name="homeMessage">Transforme suas lutas em momentos inesquecíveis</string>
+    <string name="homeNewGame">Nova Luta</string>
+    <string name="homeExit">Sair</string>
+
+
+    <string name="preGameHomeTeamLabel">Lutador 1:</string>
+    <string name="preGameAwayTeamLabel">Lutador 2:</string>
+    <string name="preGameStart">Iniciar Luta</string>
+
+    <string name="scoreGameExit">Sair</string>
+
+</resources>
