@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"  >
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ghostapps.placapp.viewModel.preGame.PreGameViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    >
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/preGameToolbar"
@@ -38,6 +47,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
         android:inputType="textCapWords"
+        android:text="@={viewModel.athleteOneName}"
         app:layout_constraintStart_toEndOf="@id/preGameGuideline"
         app:layout_constraintTop_toBottomOf="@id/preGameToolbar"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -62,6 +72,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
         android:inputType="textCapWords"
+        android:text="@={viewModel.athleteTwoName}"
         app:layout_constraintStart_toEndOf="@id/preGameGuideline"
         app:layout_constraintTop_toBottomOf="@id/preGameHomeTeamInput"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -72,6 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:layout_marginHorizontal="30dp"
+        android:onClick="@{_ -> viewModel.onStartGamePressed()}"
         android:text="@string/preGameStart"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -85,3 +97,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
