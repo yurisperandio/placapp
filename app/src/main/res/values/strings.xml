@@ -5,6 +5,8 @@
     <string name="homeNewGame">New Fight</string>
     <string name="homeExit">Exit</string>
 
+    <string name="homeRecords">Results</string>
+
 
     <string name="preGameHomeTeamLabel">Athlete One:</string>
     <string name="preGameAwayTeamLabel">Athelete Two:</string>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/itemGameRecordAthleteOneName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordAthleteOneScore"
+        tools:text="Teste"/>
+
+    <TextView
+        android:id="@+id/itemGameRecordAthleteOneNameRoundOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordAthleteOneName"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordAthleteOneScore"
+        tools:text="Round One"/>
+
+    <TextView
+        android:id="@+id/itemGameRecordAthleteOneNameRoundTwo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordAthleteOneNameRoundOne"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordAthleteOneScoreRoundTwo"
+        tools:text="Round Two"/>
+
+    <TextView
+        android:id="@+id/itemGameRecordAthleteOneNameRoundThree"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordAthleteOneNameRoundTwo"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordAthleteOneScoreRoundThree"
+        tools:text="Round Three"/>
+
+    <TextView
+        android:id="@+id/itemGameRecordAthleteOneScoreRoundTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="@id/itemGameRecordAthleteOneNameRoundTwo"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordAthleteOneNameRoundTwo"
+        app:layout_constraintBottom_toBottomOf="@id/itemGameRecordAthleteOneNameRoundTwo"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordDivisorRoundTwo"
+        tools:text="03" />
+
+    <TextView
+        android:id="@+id/itemGameRecordAthleteOneScoreRoundThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="@id/itemGameRecordAthleteOneNameRoundThree"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordAthleteOneNameRoundThree"
+        app:layout_constraintBottom_toBottomOf="@id/itemGameRecordAthleteOneNameRoundThree"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordDivisorRoundThree"
+        tools:text="03" />
+
+
+
+    <TextView
+        android:id="@+id/itemGameRecordAthleteTwoNameRoundOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordAthleteTwoScore"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordAthleteTwoName"        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Round One"/>
+
+    <TextView
+        android:id="@+id/itemGameRecordAthleteTwoNameRoundTwo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordAthleteTwoScoreRoundTwo"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordAthleteTwoNameRoundOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Round Two"/>
+    <TextView
+        android:id="@+id/itemGameRecordAthleteTwoNameRoundThree"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordAthleteTwoScoreRoundThree"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordAthleteTwoNameRoundTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Round Three"/>
+
+    <TextView
+        android:id="@+id/itemGameRecordAthleteOneScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="@id/itemGameRecordAthleteOneNameRoundOne"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordAthleteOneNameRoundOne"
+        app:layout_constraintBottom_toBottomOf="@id/itemGameRecordAthleteOneNameRoundOne"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordDivisor"
+        tools:text="03" />
+
+    <TextView
+        android:id="@+id/itemGameRecordDivisor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        app:layout_constraintTop_toTopOf="@id/itemGameRecordAthleteOneScore"
+        app:layout_constraintBottom_toBottomOf="@id/itemGameRecordAthleteOneScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/itemGameRecordDivisorRoundTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        app:layout_constraintTop_toTopOf="@id/itemGameRecordAthleteOneScoreRoundTwo"
+        app:layout_constraintBottom_toBottomOf="@id/itemGameRecordAthleteOneScoreRoundTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/itemGameRecordDivisorRoundThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        app:layout_constraintTop_toTopOf="@id/itemGameRecordAthleteOneScoreRoundThree"
+        app:layout_constraintBottom_toBottomOf="@id/itemGameRecordAthleteOneScoreRoundThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/itemGameRecordAthleteTwoScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="@id/itemGameRecordDivisor"
+        app:layout_constraintBottom_toBottomOf="@id/itemGameRecordDivisor"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordDivisor"
+        tools:text="02" />
+    <TextView
+        android:id="@+id/itemGameRecordAthleteTwoScoreRoundTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="@id/itemGameRecordDivisorRoundTwo"
+        app:layout_constraintBottom_toBottomOf="@id/itemGameRecordDivisorRoundTwo"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordDivisorRoundTwo"
+        tools:text="02" />
+    <TextView
+        android:id="@+id/itemGameRecordAthleteTwoScoreRoundThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="@id/itemGameRecordDivisorRoundThree"
+        app:layout_constraintBottom_toBottomOf="@id/itemGameRecordDivisorRoundThree"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordDivisorRoundThree"
+        tools:text="02" />
+
+    <TextView
+        android:id="@+id/itemGameRecordAthleteTwoName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordAthleteTwoScore"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordDelete"
+        tools:text="Teste"/>
+
+    <ImageView
+        android:id="@+id/itemGameRecordDelete"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:padding="10dp"
+        android:src="@android:drawable/ic_menu_delete"
+        app:layout_constraintTop_toTopOf="@id/itemGameRecordAthleteTwoName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/itemGameRecordAthleteTwoName"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordAthleteTwoName"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

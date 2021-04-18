@@ -1,11 +1,15 @@
 package com.ghostapps.placapp.domain.models
 
 class RecordModel(
-    val homeTeamName: String,
-    val homeTeamScore: Int,
+    val athleteOneName: String,
+    val athleteOneScoreRoundOne: Int,
+    val athleteOneScoreRoundTwo: Int,
+    val athleteOneScoreRoundThree: Int,
 
-    val awayTeamName: String,
-    val awayTeamScore: Int,
 
+    val athleteTwoName: String,
+    val athleteTwoScoreRoundOne: Int,
+    val athleteTwoScoreRoundTwo: Int,
+    val athleteTwoScoreRoundThree: Int,
     val data: Long
 )

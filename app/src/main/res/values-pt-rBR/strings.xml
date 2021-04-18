@@ -6,6 +6,8 @@
     <string name="homeNewGame">Nova Luta</string>
     <string name="homeExit">Sair</string>
 
+    <string name="homeRecords">Resultados</string>
+
 
     <string name="preGameHomeTeamLabel">Lutador 1:</string>
     <string name="preGameAwayTeamLabel">Lutador 2:</string>

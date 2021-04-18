@@ -1,9 +1,14 @@
 package com.ghostapps.placapp.viewModel.gameScore
 
 import android.widget.Toast
+import com.ghostapps.placapp.domain.models.RecordModel
+import com.ghostapps.placapp.domain.useCases.InsertRegister
 import com.ghostapps.placapp.viewModel.BaseViewModel
+import java.util.*
 
-class GameScoreViewModel(private val contract: GameScoreContract
+class GameScoreViewModel(private val contract: GameScoreContract,
+                         private val insertRegister: InsertRegister
+
 ): BaseViewModel() {
 
     var athleteOne = ""
@@ -137,6 +142,20 @@ class GameScoreViewModel(private val contract: GameScoreContract
      }
 
      fun onExitPressed() {
+         Thread {
+                 insertRegister.execute(
+                 RecordModel(
+                 athleteOneName = athleteOne,
+                 athleteTwoName = athleteTwo,
+                 athleteOneScoreRoundOne = athleteOneScoreRoundOne,
+                 athleteOneScoreRoundTwo = athleteOneScoreRoundTwo,
+                 athleteOneScoreRoundThree = athleteOneScoreRoundThree,
+                 athleteTwoScoreRoundOne = athleteTwoScoreRoundOne,
+                 athleteTwoScoreRoundTwo = athleteTwoScoreRoundTwo,
+                 athleteTwoScoreRoundThree = athleteTwoScoreRoundThree,
+                 data = Date().time
+                 ))
+         }.start()
              contract.onExitPressed()
      }
 
