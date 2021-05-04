@@ -1,5 +1,8 @@
 package com.ghostapps.placapp.domain.models
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
 class RecordModel(
     var athleteOneName: String?,
     var athleteOneScoreRoundOne: Int?,

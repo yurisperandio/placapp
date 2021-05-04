@@ -8,6 +8,8 @@ android {
     compileSdkVersion 30
     buildToolsVersion '30.0.2'
 
+        kotlinOptions.freeCompilerArgs = ['-Xopt-in=kotlin.RequiresOptIn']
+
     defaultConfig {
         applicationId "com.ghostapps.placapp"
         minSdkVersion 23

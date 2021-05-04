@@ -14,11 +14,14 @@ import com.ghostapps.placapp.ui.gameRecords.adapter.RecordsListAdapter
 import com.ghostapps.placapp.viewModel.gameRecords.GameRecordsViewModel
 import kotlinx.android.synthetic.main.activity_game_records.*
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.ObsoleteCoroutinesApi
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.newSingleThreadContext
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
+import javax.annotation.Nullable
 
+@OptIn(ObsoleteCoroutinesApi::class)
 class GameRecordsActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityGameRecordsBinding
@@ -35,7 +38,7 @@ class GameRecordsActivity: AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         viewModel.recordsList.observe(this, Observer { recordsList ->
-            val adapter = RecordsListAdapter(recordsList.toMutableList(), onDeletePressed = { gameRecord ->
+            val adapter = RecordsListAdapter(recordsList, onDeletePressed = { gameRecord ->
                 var dialog: AlertDialog? = null
                 dialog = AlertDialog.Builder(this)
                     .setTitle("Remover Registro")
