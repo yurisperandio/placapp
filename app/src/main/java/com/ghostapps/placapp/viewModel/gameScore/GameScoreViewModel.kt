@@ -1,13 +1,13 @@
 package com.ghostapps.placapp.viewModel.gameScore
 
-import android.widget.Toast
+
+import com.ghostapps.placapp.data.records.remote.useCases.InsertRemoteRegister
 import com.ghostapps.placapp.domain.models.RecordModel
-import com.ghostapps.placapp.domain.useCases.InsertRegister
 import com.ghostapps.placapp.viewModel.BaseViewModel
 import java.util.*
 
 class GameScoreViewModel(private val contract: GameScoreContract,
-                         private val insertRegister: InsertRegister
+                         private val insertRegister: InsertRemoteRegister
 
 ): BaseViewModel() {
 

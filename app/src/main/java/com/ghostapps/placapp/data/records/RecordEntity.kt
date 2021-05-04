@@ -1,44 +1,46 @@
 package com.ghostapps.placapp.data.records
 
-import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.ghostapps.placapp.domain.models.RecordModel
+import com.google.firebase.firestore.DocumentId
+import com.google.firebase.firestore.PropertyName
 import com.google.gson.annotations.SerializedName
 
 
-@Entity(tableName = RecordEntity.TABLE_NAME )
+//@Entity(tableName = RecordEntity.TABLE_NAME )
 class RecordEntity(
 
     @SerializedName("athlete_one_name")
-    val athleteOneName: String,
+    var athleteOneName: String?,
 
     @SerializedName("athlete_one_score_round_one")
-    val athleteOneScoreRoundOne: Int,
+    var athleteOneScoreRoundOne: Int?,
 
     @SerializedName("athlete_one_score_round_two")
-    val athleteOneScoreRoundTwo: Int,
+    var athleteOneScoreRoundTwo: Int?,
 
     @SerializedName("athlete_one_score_round_three")
-    val athleteOneScoreRoundThree: Int,
+    var athleteOneScoreRoundThree: Int?,
 
     @SerializedName("athlete_two_name")
-    val athleteTwoName: String,
+    var athleteTwoName: String?,
 
     @SerializedName("athlete_two_score_round_one")
-    val athleteTwoScoreRoundOne: Int,
+    var athleteTwoScoreRoundOne: Int?,
 
     @SerializedName("athlete_two_score_round_two")
-    val athleteTwoScoreRoundTwo: Int,
+    var athleteTwoScoreRoundTwo: Int?,
 
     @SerializedName("athlete_two_score_round_three")
-    val athleteTwoScoreRoundThree: Int,
+    var athleteTwoScoreRoundThree: Int?,
 
     @PrimaryKey
     @SerializedName("timestamp")
-    val data: Long
+    var data: Long?
 ) {
+
     companion object {
-        const val TABLE_NAME = "records_database"
+        const val COLLECTION_NAME = "records_database"
 
         fun fromModel(recordModel: RecordModel): RecordEntity {
             return RecordEntity(
@@ -53,19 +55,30 @@ class RecordEntity(
                 data = recordModel.data
             )
         }
+        fun toModel(recordEntity: RecordEntity): RecordModel {
+            return RecordModel(
+                athleteOneName = recordEntity.athleteOneName,
+                athleteTwoName = recordEntity.athleteTwoName,
+                athleteOneScoreRoundOne = recordEntity.athleteOneScoreRoundOne,
+                athleteOneScoreRoundTwo = recordEntity.athleteOneScoreRoundTwo,
+                athleteOneScoreRoundThree = recordEntity.athleteOneScoreRoundThree,
+                athleteTwoScoreRoundOne = recordEntity.athleteTwoScoreRoundOne,
+                athleteTwoScoreRoundTwo = recordEntity.athleteTwoScoreRoundTwo,
+                athleteTwoScoreRoundThree = recordEntity.athleteTwoScoreRoundThree,
+                data = recordEntity.data
+            )
+        }
     }
+    constructor() : this(
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null)
 
-    fun toModel(): RecordModel {
-        return RecordModel(
-            athleteOneName = athleteOneName,
-            athleteTwoName = athleteTwoName,
-            athleteOneScoreRoundOne = athleteOneScoreRoundOne,
-            athleteOneScoreRoundTwo = athleteOneScoreRoundTwo,
-            athleteOneScoreRoundThree = athleteOneScoreRoundThree,
-            athleteTwoScoreRoundOne = athleteTwoScoreRoundOne,
-            athleteTwoScoreRoundTwo = athleteTwoScoreRoundTwo,
-            athleteTwoScoreRoundThree = athleteTwoScoreRoundThree,
-            data = data
-        )
-    }
+
 }

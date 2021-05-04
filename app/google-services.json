@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "799946196312",
+    "project_id": "ufcapp-ee273",
+    "storage_bucket": "ufcapp-ee273.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799946196312:android:d5ff494c83692f1fbd112d",
+        "android_client_info": {
+          "package_name": "com.ghostapps.placapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799946196312-8kp1p28nshq608bnln9ouqktj50v8jvu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ghostapps.placapp",
+            "certificate_hash": "a7a5bc87b10b7a17ec87778975ab5d9cef2fdcbb"
+          }
+        },
+        {
+          "client_id": "799946196312-6j1hdh2f7jrvqskbf4pvfh4tl0a6eo6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4d47JnH1utsmWxXzrUW7W2sXvH_wYwBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799946196312-6j1hdh2f7jrvqskbf4pvfh4tl0a6eo6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
